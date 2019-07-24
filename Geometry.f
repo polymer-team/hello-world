@@ -70,7 +70,7 @@
       integer ReptKey
       
 C     if ReptKey is not 0, there will be no reptation moves
-      ReptKey=0
+      ReptKey=1
       end
       
       subroutine POS2CCB(N,rnd2,POS2)

@@ -1,0 +1,30 @@
+0        KEY   -    0-G(E) from scratch,1-continue calculation G(E),2-cont with new gam ,3-production run.
+              0        NewGE -    0 - yes, new energy bins are available, 1- No new G(E) bins 
+            128        N     -    number of monomers (links) in the system.
+              2        NC    -    number of chains in the system.
+           1000        NST   -    frequence of printing of intermediate data.
+         100000        MAXST -    max number of steps number during one run.
+          100.0        AX    -    length of site side.
+          100.0        AY    -    length of site side.
+          100.0        AZ    -    length of site side.
+              0        Zwall -    0 - No wall, 1 - Z wall
+        5698888        iseed -    starting 'random number'.
+       0.739998        RAND0 -    starting 'random number'.
+            100        NG    -    number of points in RDF.
+              2        Nof   -    number of copolymer types.
+              4        LenA  -    lenght of block A.
+              4        LenB  -    lenght of block B.
+              1        WLFact-    T0 in SAMC algorithm/T0 for Umbrella algorithm
+          0.001        SMgam0-    gamma0 in SAMC 
+        160.000        AngStifA - Equilibrium angle of stiffnes for A (grad).
+         10.000        DevStifA - Deviation Angle for A in grad.
+          0.000        AngStifB - Equilibrium angle of stiffnes for B (grad).
+           -140        EWLbound - minimal energy for WL algorithm.
+              0        Wkey  -    0-constant, 1-linear, 2-quadratic weights.
+              1        EPSAA -    Epsilon for AA (Stiff-Stiff) interaction
+              1        EPSBB -    Epsilon for BB (Flex-Flex) interaction
+              1        EPSAB -    Epsilon for AB (Stiff-Flex) interactio
+              1        EPSST -    Epsilon for stiffness interaction.
+           0.00        Realparam -Just real param
+              0        xKey  -    1 if there is inmc-econ.dat file, 0 - otherwise
+
