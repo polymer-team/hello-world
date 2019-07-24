@@ -1,0 +1,31 @@
+        SUBROUTINE RANMAR(RVEC,LEN)
+C
+C       UNIVERSAL RANDOM NUMBER GENERATOR PROPOSED BY MARSAGLIA
+C       AND ZAMAN IN REPORT FSU-SCRI-87-50
+C       GENERATES VECTOR 'RVEC' OF LENGTH 'LEN' OF PSEUDORANDOM
+C       NUMBERS; THE COMMON BLOCK INCLUDES EVERYTHING NEEDED TO
+C       COMPLETELY SPECIFY THE STATE OF THE GENERATOR.
+C
+        DIMENSION RVEC(LEN)
+C        DIMENSION RVEC(*)
+        COMMON/RASET1/U(97),C,CD,CM,I97,J97,IM_RAN(97)
+C
+        DO   100   IVEC=1,LEN
+         UNI = U(I97) - U(J97)
+         IF(UNI.LT.0.) UNI = UNI + 1.
+         U(I97) = UNI
+C         I97 = I97 - 1
+C         IF(I97.EQ.0) I97 = 97
+C         J97 = J97 - 1
+C         IF(J97.EQ.0) J97 = 97
+         I97 = IM_RAN(I97)
+         J97 = IM_RAN(J97)
+         C = C - CD
+         IF(C.LT.0.) C = C + CM
+         UNI = UNI - C
+         IF(UNI.LT.0.) UNI = UNI + 1.
+         RVEC(IVEC) = UNI
+c         write(*,*) ivec, uni
+100     CONTINUE
+        RETURN
+        END

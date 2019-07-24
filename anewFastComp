@@ -1,0 +1,20 @@
+mpif90 -O3 -xavx -c DynamicResize.f
+mpif90 -O3 -xavx -c Ranmar.f
+mpif90 -O3 -xavx -c Rmarin.f
+mpif90 -O3 -xavx -c Step_2.f
+mpif90 -O3 -xavx -c Energy.f
+mpif90 -O3 -xavx -c Begin.f
+mpif90 -O3 -xavx -c Table.f
+mpif90 -O3 -xavx -c Angles.f
+mpif90 -O3 -xavx -c ToVRML.f
+mpif90 -O3 -xavx -c SAMC.f
+mpif90 -O3 -xavx -c Tensor.f
+mpif90 -O3 -xavx -c IniParall.f
+mpif90 -O3 -xavx -c Reptation.f
+mpif90 -O3 -xavx -c EndBridge.f
+mpif90 -O3 -xavx -c ConfBias.f
+mpif90 -O3 -xavx -c Geometry.f
+mpif90 -O3 -xavx -c Output.f
+mpif90 -O3 -xavx Mc-cont.f DynamicResize.o SAMC.o Tensor.o Step_2.o Energy.o Begin.o Table.o Ranmar.o Rmarin.o ToVRML.o Angles.o IniParall.o Reptation.o EndBridge.o ConfBias.o Geometry.o Output.o -o SAMC_SF
+rm *.o
+rm *.mod

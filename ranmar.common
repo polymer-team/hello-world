@@ -1,0 +1,3 @@
+      real u(97), c, cd, cm
+      integer i97, j97, im_ran(97)
+      common/raset1/ u,c,cd,cm,i97,j97,im_ran
